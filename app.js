@@ -1,19 +1,32 @@
+const fs = require("fs");
 
-const functions = require("./solutions/day3.js");
-const filename = "./input/day3.txt";
+// const argv = require("yargs") 
+//     .usage("Get AOC2018 solutions")
+//     .help("help").alias("help", "h")
+//     .options({
+//         day: { description: "Day number", requiresArg: true, required: true },
+//         function: { description: "Function name (for ex. getFirstStar, getSecondStar)", requiresArg: true, required: true }
+//     })
+//     .argv;
 
-let promisedData = readData(filename);
+// const fPath = require(`./solutions/day${argv.day}.js`);
+// const inputPath = `./input/day${argv.day}.txt`;
+// const fName = argv.function;
+
+const fPath = require("./solutions/day3.js");
+const inputPath = "./input/day3.txt";
+const fName = "getSecondStar";
+
+let promisedData = readData(inputPath);
 promisedData.then(inputData => {
-    const result = functions.getFirstStar(inputData);
+    const result = fPath[`${fName}`](inputData);
     console.log(result);
 });
 
-
-function readData(filename) {
+function readData(inputPath) {
     return new Promise(resolve => {
-        let fs = require("fs");
 
-        fs.readFile(filename, "utf8", function (err, data) {
+        fs.readFile(inputPath, "utf8", function (err, data) {
             if (err) throw err;
             resolve(data);
         });
@@ -21,5 +34,4 @@ function readData(filename) {
 }
 
 
-// argv
 // write typescript functions and link them to node js
