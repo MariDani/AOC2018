@@ -15,7 +15,7 @@ const fs = require("fs");
 
 const fPath = require("./solutions/day6.js");
 const inputPath = "./input/day6.txt";
-const fName = "getFirstStar";
+const fName = "getSecondStar";
 
 let promisedData = readData(inputPath);
 promisedData.then(inputData => {
