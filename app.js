@@ -13,8 +13,8 @@ const fs = require("fs");
 // const inputPath = `./input/day${argv.day}.txt`;
 // const fName = argv.function;
 
-const fPath = require("./solutions/day6.js");
-const inputPath = "./input/day6.txt";
+const fPath = require("./solutions/day11.js");
+const inputPath = "./input/day11.txt";
 const fName = "getSecondStar";
 
 let promisedData = readData(inputPath);
