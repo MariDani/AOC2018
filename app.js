@@ -13,9 +13,9 @@ const fs = require("fs");
 // const inputPath = `./input/day${argv.day}.txt`;
 // const fName = argv.function;
 
-const fPath = require("./solutions/day11.js");
-const inputPath = "./input/day11.txt";
-const fName = "getSecondStar";
+const fPath = require("./solutions/day7.js");
+const inputPath = "./input/day7.txt";
+const fName = "getFirstStar";
 
 let promisedData = readData(inputPath);
 promisedData.then(inputData => {
@@ -32,6 +32,3 @@ function readData(inputPath) {
         });
     });
 }
-
-
-// write typescript functions and link them to node js
