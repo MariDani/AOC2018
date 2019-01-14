@@ -1,8 +1,8 @@
 const fs = require("fs");
 
-const fPath = require("./solutions/day9.js");
-const inputPath = "./input/day9.txt";
-const fName = "getFirstStar";
+const fPath = require("./solutions/day16.js");
+const inputPath = "./input/day16.txt";
+const fName = "getSecondStar";
 
 let promisedData = readData(inputPath);
 promisedData.then(inputData => {
